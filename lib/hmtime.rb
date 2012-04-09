@@ -15,15 +15,6 @@ class HMTime
     time
   end
   
-  def time
-    my_time = [hours, minutes.to_s.rjust(2,"0")].join(":")
-    if @minutes < 0
-      "-" + my_time
-    else
-      my_time
-    end
-  end
-  
   def hours
     @minutes.abs / 60
   end
@@ -95,6 +86,15 @@ class HMTime
   end
   
   private
+  
+  def time
+    my_time = [hours, minutes.to_s.rjust(2,"0")].join(":")
+    if @minutes < 0
+      "-" + my_time
+    else
+      my_time
+    end
+  end
   
   def check_arguments(value)
     if(value == nil)
