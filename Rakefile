@@ -2,7 +2,7 @@ require 'rubygems'
 require 'rake'
 require 'echoe'
 
-Echoe.new('hmtime','0.1.0') do |p|
+Echoe.new('hmtime','0.1.1') do |p|
   p.description     = "A simple HMTime object for representing and performing math on hours and minutes. HHH:MM"
   p.url             = "http://github.com/advorak/hmtime"
   p.author          = "Andrew Dvorak"
