@@ -105,9 +105,11 @@ class HMTime
       elsif (!value.is_a?(String))
         raise TypeError, ERROR_MESSAGE_1
 
-      # Is the argument a string of format "hhh:mm"?  If not, raise an error.
-      elsif !(arguments = value.strip.match(/^(\d+|\s+)?:(\d{2})$/).to_a[1..2])
+      # Is the argument a string of format ("hhh:mm" or " ".strip.empty?)?  If not, raise an error.
+      elsif !value.strip.empty? && !(arguments = value.strip.match(/^(\d+|\s+)?:(\d{2})$/).to_a[1..2])
         raise ArgumentError, ERROR_MESSAGE_1
+      elsif value.strip.empty?
+        arguments = [0,0]
       end
 
       ### How to do a warning??  Is this correct?
