@@ -1,0 +1,22 @@
+PATH
+  remote: .
+  specs:
+    hmtime (0.2.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.22.3)
+    rake (13.1.0)
+
+PLATFORMS
+  ruby
+  x86_64-linux
+
+DEPENDENCIES
+  hmtime!
+  minitest (~> 5.16)
+  rake (~> 13.0)
+
+BUNDLED WITH
+   2.5.3
