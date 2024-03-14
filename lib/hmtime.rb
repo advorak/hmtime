@@ -100,7 +100,7 @@ class HMTime
     if(value == nil)
       value
     else
-      if(value.is_a?(Fixnum))
+      if(value.is_a?(Integer))
         arguments = [value / 60, value % 60]
       elsif (!value.is_a?(String))
         raise TypeError, ERROR_MESSAGE_1
