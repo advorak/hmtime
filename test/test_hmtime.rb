@@ -40,8 +40,8 @@ class TestHMTime < Minitest::Test
     assert_equal 1, HMTime.new(61).hours, "HMTime objects should have 1 hour"
     assert_equal 1, HMTime.new(61).minutes, "HMTime objects should have 1 minute"
     assert_equal 0, HMTime.new(-1).hours, "HMTime objects should have 1 hour"
-    assert_equal -1, HMTime.new(-61).hours, "HMTime objects should have 1 hour"
-    assert_equal -1, HMTime.new(-61).minutes, "HMTime objects should have 1 minute"
+    assert_equal (-1), HMTime.new(-61).hours, "HMTime objects should have 1 hour"
+    assert_equal (-1), HMTime.new(-61).minutes, "HMTime objects should have 1 minute"
   end
   
   # assert_equal @hmtime, HMTime.new(''), "New HMTime objects should not be equal"
