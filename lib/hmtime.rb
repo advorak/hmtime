@@ -110,13 +110,14 @@ class HMTime
       arguments = ['',0,0]
     end
 
+    is_negative = arguments[0] == '-'
+    hours, minutes = arguments[1,2].collect{|arg| arg.to_i}
+
     ### How to do a warning??  Is this correct?
-    if arguments[1].to_i > 59
+    if minutes.to_i > 59
       warn "Warning: The mm (minutes) field of `hhh:mm` should be no greater than 59."
     end
 
-    is_negative = arguments[0] == '-'
-    hours, minutes = arguments[1,2].collect{|arg| arg.to_i}
     
     return (is_negative ? -1 : 1) * ((hours * 60) + minutes)
   end
